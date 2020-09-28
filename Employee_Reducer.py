@@ -1,3 +1,5 @@
+#!/usr/bin/python3
+
 import sys
 
 last_key = None
@@ -5,8 +7,7 @@ current = 0
 key = None
 
 for line in sys.stdin:
-    line = line.strip()
-    key, value = line.split('\t', 1)
+    key, value = line.split('\t')
     try:
         value = int(value)
     except ValueError:
