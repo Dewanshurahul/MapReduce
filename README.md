@@ -24,6 +24,10 @@ Solution :- The solution for this Question is divided into three parts
 ```sh
 $ hadoop jar /usr/local/hadoop/share/hadoop/tools/lib/hadoop-streaming-2.7.3.jar -input /hadoop/input/HR2m.csv -output /hadoop/output/employee_region -mapper employeeRegion_mapper.py -combiner combiner.py -reducer Employee_Reducer.py
 ```
+
+OutPut Image :- 
+<img src=outputImages/regionOutput.png>
+
  - 2nd :- For Country
  - - I have used mapper as EmployeeCountry_Mapper.py file
  - - And for reducer Employee_Reducer.py file
@@ -31,6 +35,9 @@ $ hadoop jar /usr/local/hadoop/share/hadoop/tools/lib/hadoop-streaming-2.7.3.jar
 ```sh
 $ hadoop jar /usr/local/hadoop/share/hadoop/tools/lib/hadoop-streaming-2.7.3.jar -input /hadoop/input/HR2m.csv -output /hadoop/output/employee_country -mapper EmployeeCountry_Mapper.py -combiner combiner.py -reducer Employee_Reducer.py
 ```
+OutPut Image :- 
+<img src=outputImages/countryOutput.png>
+
  - 3rd :- For City
  - - I have used mapper as EmployeeCity_Mapper.py file
  - - And for reducer Employee_Reducer.py file
@@ -38,6 +45,9 @@ $ hadoop jar /usr/local/hadoop/share/hadoop/tools/lib/hadoop-streaming-2.7.3.jar
 ```sh
 $ hadoop jar /usr/local/hadoop/share/hadoop/tools/lib/hadoop-streaming-2.7.3.jar -input /hadoop/input/HR2m.csv -output /hadoop/output/employee_city -mapper EmployeeCity_Mapper.py -combiner combiner.py -reducer Employee_Reducer.py
 ```
+
+OutPut Image :- 
+<img src=outputImages/cityOutput.png>
 
 Question 2:- Summary for Employee
 Solution - This part is taken care in Different Question of this exercise
@@ -60,6 +70,9 @@ $ hadoop jar /usr/local/hadoop/share/hadoop/tools/lib/hadoop-streaming-2.7.3.jar
 $ hadoop jar /usr/local/hadoop/share/hadoop/tools/lib/hadoop-streaming-2.7.3.jar -input /hadoop/input/HR2m.csv -output /hadoop/output/data_sorted_by_salary -mapper sort_salary_mapper.py -reducer sortter.py
 ```
 
+OutPut Image :- 
+<img src=outputImages/salarySorted.png>
+
 Question 4 :- Summarise the number of emp joined and hickes granted based on month
 Solution :- In this Problem I have used
  - as mapper hikes_granted_mapper.py file
@@ -68,6 +81,10 @@ Solution :- In this Problem I have used
 ```sh
 $ hadoop jar /usr/local/hadoop/share/hadoop/tools/lib/hadoop-streaming-2.7.3.jar -input /hadoop/input/HR2m.csv -output /hadoop/output/hikes_granted_based_on_month -mapper hikes_granted_mapper.py -reducer Employee_Reducer.py
 ```
+
+OutPut Image :- 
+<img src=outputImages/hikeGranted.png>
+
 Question 5 :- Salary wise sort employee data
 Solution :- In this problem I have used
  - as mapper sort_salary_mapper.py file
@@ -76,3 +93,6 @@ Solution :- In this problem I have used
 ```sh
 $ hadoop jar /usr/local/hadoop/share/hadoop/tools/lib/hadoop-streaming-2.7.3.jar -input /hadoop/input/HR2m.csv -output /hadoop/output/data_sorted_by_salary -mapper sort_salary_mapper.py -reducer sortter.py
 ```
+
+OutPut Image :- 
+<img src=outputImages/salarySorted.png>
